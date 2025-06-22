@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《凡骨：问道篇》完整剧集 - 高清玄幻修仙短剧在线播放 | 免费观看全集</title>
+    <meta name="description" content="免费在线观看《凡骨：问道篇》高清玄幻短剧，完整剧集连续播放。平凡少年逆天改命的修仙之路，道心觉醒的热血故事。支持选集、倍速、全屏播放等功能。">
+    <meta name="keywords" content="凡骨问道篇,凡骨问道篇短剧,修仙短剧,玄幻短剧,问道修仙剧,国风玄幻,修真短剧,短剧在线播放,高清短剧,凡骨问道篇全集,凡骨问道篇免费观看">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e6f1ff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 0;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #89c4f4;
+            font-size: 1.1rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .player-section {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .video-player {
+            flex: 1;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-video {
+            width: 100%;
+            display: block;
+            max-height: 65vh;
+            background: #111;
+        }
+
+        .video-controls {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .control-btn {
+            background: transparent;
+            border: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-btn:hover {
+            background: rgba(123, 31, 162, 0.3);
+            color: #fff;
+        }
+
+        .episodes-container {
+            width: 320px;
+            background: rgba(30, 30, 46, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .episodes-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .episodes-title {
+            font-size: 1.3rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .total-episodes {
+            background: rgba(123, 31, 162, 0.3);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .episodes-list {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        .episodes-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .episodes-list::-webkit-scrollbar-thumb {
+            background: rgba(123, 31, 162, 0.5);
+            border-radius: 4px;
+        }
+
+        .episode-item {
+            padding: 12px 15px;
+            background: rgba(45, 45, 77, 0.6);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .episode-item:hover {
+            background: rgba(74, 20, 140, 0.4);
+            transform: translateX(5px);
+        }
+
+        .episode-item.active {
+            background: rgba(123, 31, 162, 0.6);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(123, 31, 162, 0.4);
+        }
+
+        .episode-number {
+            min-width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(66, 66, 96, 0.8);
+            color: #e0e0e0;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        .episode-item.active .episode-number {
+            background: #7b1fa2;
+            box-shadow: 0 0 10px rgba(123, 31, 162, 0.8);
+            color: white;
+        }
+
+        .episode-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .episode-title {
+            font-weight: 500;
+            color: #f5f5f5;
+            font-size: 15px;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .episode-duration {
+            color: #89c4f4;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        .progress-section {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 30%;
+            background: linear-gradient(90deg, #7b1fa2 0%, #e040fb 100%);
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .progress-circle {
+            position: absolute;
+            right: -8px;
+            top: -5px;
+            width: 16px;
+            height: 16px;
+            background: #e040fb;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(224, 64, 251, 0.8);
+        }
+
+        .current-playing {
+            text-align: center;
+            padding: 20px;
+            background: rgba(26, 26, 46, 0.7);
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .current-playing .title {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .current-playing .episode-info {
+            font-size: 16px;
+            color: #89c4f4;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(137, 196, 244, 0.1);
+            padding: 5px 12px;
+            border-radius: 50px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            .player-section {
+                flex-direction: column;
+            }
+
+            .episodes-container {
+                width: 100%;
+            }
+
+            .episodes-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+                max-height: none;
+            }
+
+            .episode-item {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .video-controls {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .control-group {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .episodes-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 处理未知时长的特殊样式 */
+        .unknown-duration {
+            color: #bb86fc;
+            font-style: normal;
+            position: relative;
+        }
+
+        .unknown-duration::after {
+            content: '?';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: rgba(187, 134, 252, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .help-tip {
+            display: inline-block;
+            position: relative;
+            margin-left: 5px;
+            color: #89c4f4;
+            cursor: help;
+        }
+
+        .info-box {
+            background: rgba(26, 26, 46, 0.9);
+            border-left: 4px solid #7b1fa2;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .info-box h3 {
+            color: #e040fb;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><i class="fas fa-play-circle"></i> 凡骨：问道篇（64集）</h1>
+        <p><a href="https://url03.ctfile.com/f/64369603-1520916298-87d450?p=8078" title="下载密码：8078">下载全集，下载密码：8078</a></p>
+
+    </header>
+
+    <div class="player-section">
+        <div class="video-player">
+            <video id="main-video" controls poster="https://images.unsplash.com/photo-1574717024453-354056aafa98?w=800">
+                <source src="" type="video/mp4">
+                您的浏览器不支持HTML5视频播放
+            </video>
+
+            <div class="progress-section">
+                <div class="progress-labels">
+                    <span id="current-time">00:00</span>
+                    <span id="duration-time">--:--</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-controls">
+                <div class="control-group">
+                    <button class="control-btn" id="prev-btn">
+                        <i class="fas fa-step-backward"></i>
+                        <span>上一集</span>
+                    </button>
+                    <button class="control-btn" id="play-btn">
+                        <i class="fas fa-play"></i>
+                        <span>播放</span>
+                    </button>
+                    <button class="control-btn" id="pause-btn">
+                        <i class="fas fa-pause"></i>
+                        <span>暂停</span>
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <button class="control-btn" id="next-btn">
+                        <i class="fas fa-step-forward"></i>
+                        <span>下一集</span>
+                    </button>
+                    <button class="control-btn" id="fullscreen-btn">
+                        <i class="fas fa-expand"></i>
+                        <span>全屏</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="episodes-container">
+            <div class="episodes-header">
+                <div class="episodes-title">剧集列表</div>
+                <div class="total-episodes">共64集</div>
+            </div>
+            <div class="episodes-list" id="episodes-list">
+                <!-- 剧集列表由JS生成 -->
+            </div>
+        </div>
+    </div>
+
+<!--    <div class="info-box">-->
+<!--        <h3><i class="fas fa-info-circle"></i> 方案说明：处理未知时长的剧集</h3>-->
+<!--        <p>本播放器特别处理了剧集时长未知的情况：</p>-->
+<!--        <ul>-->
+<!--            <li>时长未知剧集显示"时长未知"及标识?</li>-->
+<!--            <li>播放后自动获取并更新时长信息</li>-->
+<!--            <li>已播放过的剧集会显示实际时长</li>-->
+<!--            <li>为未知时长提供了特殊视觉样式</li>-->
+<!--            <li>系统自动记录播放进度和时长信息</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+</div>
+
+<script>
+    const durations = {
+        "1.mp4" : 361,
+        "10.mp4" : 76,
+        "11.mp4" : 120,
+        "12.mp4" : 162,
+        "13.mp4" : 168,
+        "14.mp4" : 191,
+        "15.mp4" : 126,
+        "16.mp4" : 152,
+        "17.mp4" : 117,
+        "18.mp4" : 115,
+        "19.mp4" : 102,
+        "2.mp4" : 275,
+        "20.mp4" : 114,
+        "21.mp4" : 89,
+        "22.mp4" : 132,
+        "23.mp4" : 92,
+        "24.mp4" : 118,
+        "25.mp4" : 111,
+        "26.mp4" : 94,
+        "27.mp4" : 106,
+        "28.mp4" : 146,
+        "29.mp4" : 188,
+        "3.mp4" : 181,
+        "30.mp4" : 142,
+        "31.mp4" : 166,
+        "32.mp4" : 120,
+        "33.mp4" : 156,
+        "34.mp4" : 127,
+        "35.mp4" : 113,
+        "36.mp4" : 147,
+        "37.mp4" : 108,
+        "38.mp4" : 112,
+        "39.mp4" : 117,
+        "4.mp4" : 127,
+        "40.mp4" : 159,
+        "41.mp4" : 196,
+        "42.mp4" : 100,
+        "43.mp4" : 73,
+        "44.mp4" : 120,
+        "45.mp4" : 62,
+        "46.mp4" : 65,
+        "47.mp4" : 101,
+        "48.mp4" : 114,
+        "49.mp4" : 116,
+        "5.mp4" : 49,
+        "50.mp4" : 169,
+        "51.mp4" : 197,
+        "52.mp4" : 69,
+        "53.mp4" : 102,
+        "54.mp4" : 122,
+        "55.mp4" : 119,
+        "56.mp4" : 106,
+        "57.mp4" : 134,
+        "58.mp4" : 221,
+        "59.mp4" : 112,
+        "6.mp4" : 96,
+        "60.mp4" : 191,
+        "61.mp4" : 156,
+        "62.mp4" : 160,
+        "63.mp4" : 203,
+        "64.mp4" : 527,
+        "7.mp4" : 64,
+        "8.mp4" : 102,
+        "9.mp4" : 115
+    }
+    // 剧集数据 - 包含有明确时长和未知时长的剧集
+    const episodes = [
+        // { title: "第1集：初次相遇", duration: "12:30", video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第2集：餐厅约会", duration: null, video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第3集：误会真相", duration: "14:15", video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第4集：雨中表白", duration: null, video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第5集：家人反对", duration: "15:05", video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第6集：艰难抉择", duration: null, video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第7集：异国之旅", duration: null, video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第8集：意外重逢", duration: "13:25", video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第9集：情敌出现", duration: null, video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+        // { title: "第10集：幸福结局", duration: "17:05", video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" }
+    ];
+
+    for (let i = 1; i <= 64; i++) {
+        episodes.push ({
+            title: "第"+i+"集",
+            duration: (durations[i+".mp4"]/60).toFixed(2)+"",
+            video: "./video/"+i+".mp4",
+        })
+    }
+
+    // 存储播放历史（包含获取到的实际时长）
+    const playbackHistory = JSON.parse(localStorage.getItem('playbackHistory')) || [];
+
+    // 页面加载完成后初始化播放器
+    document.addEventListener('DOMContentLoaded', () => {
+        const videoPlayer = document.getElementById('main-video');
+        const episodesList = document.getElementById('episodes-list');
+        const currentTime = document.getElementById('current-time');
+        const durationTime = document.getElementById('duration-time');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const playBtn = document.getElementById('play-btn');
+        const pauseBtn = document.getElementById('pause-btn');
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const progressBar = document.querySelector('.progress-bar');
+        const progressContainer = document.querySelector('.progress-container');
+
+        let currentEpisode = 0;
+
+        // 应用播放历史到剧集数据
+        playbackHistory.forEach(history => {
+            const episode = episodes.find(e => e.title === history.title);
+            if (episode && history.duration) {
+                episode.duration = history.duration;
+            }
+        });
+
+        // 渲染剧集列表
+        episodes.forEach((episode, index) => {
+            const episodeElement = document.createElement('div');
+            episodeElement.className = 'episode-item';
+            episodeElement.dataset.index = index;
+
+            // 特殊处理时长未知的情况
+            const durationDisplay = episode.duration ||
+                (playbackHistory.find(h => h.title === episode.title)?.duration || '时长未知');
+
+            const durationClass = !episode.duration && !playbackHistory.find(h => h.title === episode.title) ? 'unknown-duration' : '';
+
+            episodeElement.innerHTML = `
+                    <div class="episode-number">${index + 1}</div>
+                    <div class="episode-info">
+                        <div class="episode-title">${episode.title}</div>
+                        <div class="episode-duration ${durationClass}">${durationDisplay}${!durationClass ? '' : ' <span class="help-tip" title="时长将在播放后更新">?</span>'}</div>
+                    </div>
+                `;
+
+            if (index === 0) {
+                episodeElement.classList.add('active');
+            }
+
+            episodeElement.addEventListener('click', () => {
+                playEpisode(index);
+            });
+
+            episodesList.appendChild(episodeElement);
+        });
+
+        // 播放指定剧集
+        function playEpisode(index) {
+            // 更新活跃状态
+            document.querySelectorAll('.episode-item').forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            // 更新当前播放信息
+            currentEpisode = index;
+            const episode = episodes[index];
+
+            // 显示当前时长（如果有）
+            const history = playbackHistory.find(h => h.title === episode.title);
+
+            // 设置视频源
+            videoPlayer.src = episode.video;
+            videoPlayer.load();
+            videoPlayer.play();
+
+            // 更新剧集时长显示
+            const episodeElement = document.querySelector(`.episode-item[data-index="${index}"]`);
+            if (episodeElement) {
+                const durationElement = episodeElement.querySelector('.episode-duration');
+                if (durationElement) {
+                    // 如果已经有了实际时长，不再显示未知样式
+                    durationElement.classList.remove('unknown-duration');
+                }
+            }
+        }
+
+        // 上一集
+        prevBtn.addEventListener('click', () => {
+            if (currentEpisode > 0) {
+                playEpisode(currentEpisode - 1);
+            }
+        });
+
+        // 下一集
+        nextBtn.addEventListener('click', () => {
+            if (currentEpisode < episodes.length - 1) {
+                playEpisode(currentEpisode + 1);
+            }
+        });
+
+        // 播放按钮
+        playBtn.addEventListener('click', () => {
+            videoPlayer.play();
+        });
+
+        // 暂停按钮
+        pauseBtn.addEventListener('click', () => {
+            videoPlayer.pause();
+        });
+
+        // 全屏按钮
+        fullscreenBtn.addEventListener('click', () => {
+            if (videoPlayer.requestFullscreen) {
+                videoPlayer.requestFullscreen();
+            } else if (videoPlayer.webkitRequestFullscreen) {
+                videoPlayer.webkitRequestFullscreen();
+            } else if (videoPlayer.msRequestFullscreen) {
+                videoPlayer.msRequestFullscreen();
+            }
+        });
+
+        // 进度条点击
+        progressContainer.addEventListener('click', (e) => {
+            const pos = (e.pageX - progressContainer.getBoundingClientRect().left) / progressContainer.offsetWidth;
+            videoPlayer.currentTime = pos * videoPlayer.duration;
+            progressBar.style.width = `${pos * 100}%`;
+        });
+
+        // 进度更新
+        videoPlayer.addEventListener('timeupdate', () => {
+            const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+            progressBar.style.width = `${percent}%`;
+
+            // 更新时间显示
+            currentTime.textContent = formatTime(videoPlayer.currentTime);
+        });
+
+        // 监听视频加载的元数据（可以获取时长）
+        videoPlayer.addEventListener('loadedmetadata', () => {
+            // 获取视频时长
+            const duration = videoPlayer.duration;
+            const formattedDuration = formatTime(duration);
+
+            // 更新界面时长显示
+            durationTime.textContent = formattedDuration;
+
+            // 更新当前剧集的实际时长
+            const episode = episodes[currentEpisode];
+
+            // 如果这个剧集没有存储过时长（或者是未知的）
+            if (!episode.duration) {
+                // 在剧集数据中保存实际时长
+                episode.duration = formattedDuration;
+
+                // 在页面上更新时长显示
+                const episodeElement = document.querySelector(`.episode-item[data-index="${currentEpisode}"]`);
+                if (episodeElement) {
+                    const durationElement = episodeElement.querySelector('.episode-duration');
+                    if (durationElement) {
+                        durationElement.textContent = formattedDuration;
+                        durationElement.classList.remove('unknown-duration');
+                    }
+                }
+            }
+
+            // 保存播放历史
+            const existingEntry = playbackHistory.find(entry => entry.title === episode.title);
+            if (existingEntry) {
+                existingEntry.duration = formattedDuration;
+            } else {
+                playbackHistory.push({
+                    title: episode.title,
+                    duration: formattedDuration,
+                    lastPlayed: new Date()
+                });
+            }
+
+            // 保存到本地存储
+            localStorage.setItem('playbackHistory', JSON.stringify(playbackHistory));
+        });
+
+        // 监听视频播放结束，自动播放下一个剧集
+        videoPlayer.addEventListener('ended', () => {
+            if (currentEpisode < episodes.length - 1) {
+                playEpisode(currentEpisode + 1);
+            }
+        });
+
+        // 辅助函数：格式化时间（秒 => mm:ss）
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds === Infinity) return '--:--';
+
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // 初始播放第一集
+        playEpisode(0);
+    });
+</script>
+</body>
+</html>
